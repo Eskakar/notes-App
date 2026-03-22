@@ -1,0 +1,58 @@
+//ubah isi token sesuai token yang tergenerate
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjozLCJuYW1hIjoiTWFtIEJhbyIsImlhdCI6MTc3NDE5MTcwNywiZXhwIjoxNzc0MTk1MzA3fQ.ruB2t-6C3rjK1i-lN-PYfAB93XkJwx7cnw-CGmfl0a8
+###
+# POST : Create User
+POST http://localhost:3000/api/v1/users/Register HTTP/1.1
+Content-Type: application/json
+
+{
+  "nama": "angpao",
+  "password": "321"
+}
+
+###
+# POST : login User
+POST http://localhost:3000/api/v1/users/Login HTTP/1.1
+Content-Type: application/json
+
+{
+  "nama": "Mam Bao",
+  "password": "121"
+}
+
+//testing note
+###
+# POST : create note
+POST http://localhost:3000/api/v1/notes
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "judul": "Catatan keenam",
+  "isi": "dasdas asdfqer"
+}
+
+### 
+#GET NOTE BY ID
+GET http://localhost:3000/api/v1/notes/1
+Authorization: Bearer {{token}}
+
+### 
+#GET ALL NOTES
+GET http://localhost:3000/api/v1/notes
+Authorization: Bearer {{token}}
+
+### UPDATE NOTE
+PUT http://localhost:3000/api/v1/notes/3
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "judul": "Update Judul",
+  "isi": "Isi sudah diperbarui"
+}
+
+### 
+#DELETE NOTE
+DELETE http://localhost:3000/api/v1/notes/4
+Authorization: Bearer {{token}}
