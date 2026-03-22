@@ -1,5 +1,5 @@
 //ubah isi token sesuai token yang tergenerate
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjozLCJuYW1hIjoiTWFtIEJhbyIsImlhdCI6MTc3NDE5MTcwNywiZXhwIjoxNzc0MTk1MzA3fQ.ruB2t-6C3rjK1i-lN-PYfAB93XkJwx7cnw-CGmfl0a8
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjozLCJuYW1hIjoiTWFtIEJhbyIsImlhdCI6MTc3NDIwNDY5OCwiZXhwIjoxNzc0MjA4Mjk4fQ.4MtROBAYBfMdm2Y-Dza9GOvhoIRC7kkOPQFDAyTgn1g
 ###
 # POST : Create User
 POST http://localhost:3000/api/v1/users/Register HTTP/1.1
