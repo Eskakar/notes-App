@@ -26,7 +26,22 @@ app.use("/api/v1/notes", noteRoutes); // Untuk setting routes note
 
 // Sync Database dan Jalankan Server
 const port = process.env.PORT || 3000;
-sequelize.sync().then(() => {
-  console.log("Database synced");
-  app.listen(port, () => console.log(`Server running on port ${port}`));
-});
+//========== untuk connect jika belum import ================
+// sequelize.sync().then(() => {
+//   console.log("Database synced");
+//   app.listen(port, () => console.log(`Server running on port ${port}`));
+// });
+
+(async () => {
+  try {
+    await sequelize.authenticate();
+    console.log("Database connected ");
+
+    app.listen(port, () => {
+      console.log(`Server running on port ${port}`);
+    });
+
+  } catch (error) {
+    console.error("Database connection failed :", error);
+  }
+})();
