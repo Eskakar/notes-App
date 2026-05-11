@@ -1,5 +1,5 @@
 //ubah isi token sesuai token yang tergenerate
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjozLCJuYW1hIjoiTWFtIEJhbyIsImlhdCI6MTc3NDIwNDY5OCwiZXhwIjoxNzc0MjA4Mjk4fQ.4MtROBAYBfMdm2Y-Dza9GOvhoIRC7kkOPQFDAyTgn1g
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjo4LCJuYW1hIjoiYW5ncGFvIiwiaWF0IjoxNzc0Mjc5ODIyLCJleHAiOjE3NzQyODM0MjJ9.6T4k-bDWeen_KiIx8XDSP2YfRZAXEKdj69IIOPeEfsk
 ###
 # POST : Create User
 POST http://localhost:3000/api/v1/users/Register HTTP/1.1
@@ -14,10 +14,10 @@ Content-Type: application/json
 # POST : login User
 POST http://localhost:3000/api/v1/users/Login HTTP/1.1
 Content-Type: application/json
-
+  
 {
-  "nama": "Mam Bao",
-  "password": "121"
+  "nama": "angpao",
+  "password": "321"
 }
 
 //testing note
@@ -28,13 +28,13 @@ Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-  "judul": "Catatan keenam",
-  "isi": "dasdas asdfqer"
+  "judul": "Catatan Pertama",
+  "isi": "Hallo dunia"
 }
 
 ### 
 #GET NOTE BY ID
-GET http://localhost:3000/api/v1/notes/1
+GET http://localhost:3000/api/v1/notes/19
 Authorization: Bearer {{token}}
 
 ### 
@@ -43,7 +43,7 @@ GET http://localhost:3000/api/v1/notes
 Authorization: Bearer {{token}}
 
 ### UPDATE NOTE
-PUT http://localhost:3000/api/v1/notes/3
+PUT http://localhost:3000/api/v1/notes/19
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
@@ -54,5 +54,5 @@ Authorization: Bearer {{token}}
 
 ### 
 #DELETE NOTE
-DELETE http://localhost:3000/api/v1/notes/4
+DELETE http://localhost:3000/api/v1/notes/19
 Authorization: Bearer {{token}}
